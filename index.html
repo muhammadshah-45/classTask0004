@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        width: 100%;
+        display: flex;
+
+     }
+     .container{
+        position: relative;
+        width: 100%;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+
+     }
+    
+     button {
+    position: relative;
+    top: 34%;
+    left: 4%;
+    transform: translate(-40%,456%);
+    padding: 11px 15px;
+    border-radius: 6px;
+    border: none;
+}
+     body.dark{
+        background-color: black;
+     }
+     /*  */
+     .btn{
+        background-color: white;
+        color: black;
+        border: none;
+     }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <button id="btn" >Day Mode</button>
+    </div>
+    <script>
+        var body = document.getElementById("body")
+        var btn = document.getElementById("btn");
+        var isDark = false;
+        btn.addEventListener("click",function(){
+            if(isDark === false){
+                body.style.background = "black";
+                btn.style.background = "white";
+                btn.style.color= "black";
+                btn.style.padding="12px 15px";
+                btn.style.borderRadius = "5px"
+                btn.innerText = "Day Mode";
+                btn.style.fontWeight = "700"
+                btn.style.border = "none"
+                isDark = true;
+            }else{
+                body.style.background = "white";
+                btn.style.background = "black";
+                btn.innerText = "Night Mode"
+                btn.style.color= "white";
+                  btn.style.padding="12px 15px";
+                btn.style.borderRadius = "5px"
+                isDark = false;
+            }
+        })
+    </script>
+</body>
+</html>
